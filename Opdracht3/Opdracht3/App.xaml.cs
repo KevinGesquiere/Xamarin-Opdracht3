@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Opdracht3.Pages;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Opdracht3
@@ -11,7 +12,7 @@ namespace Opdracht3
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new NewPlacePage());
         }
 
         protected override void OnStart()

@@ -3,6 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Opdracht3.App">
     <Application.Resources>
+        <ResourceDictionary>
+            <!-- On Platform Resources -->
+            <OnPlatform x:Key="DefaultThickness" x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="15"></On>
+                <On Platform="Android" Value="20"></On>
+                <On Platform="UWP" Value="10"></On>
+            </OnPlatform>
+            <OnPlatform x:Key="ErrorMessageFontSize" x:TypeArguments="NamedSize">
+                <On Platform="iOS, Android" Value="Small"></On>
+                <On Platform="UWP" Value="Micro"></On>
+            </OnPlatform>
+            <!-- Explicit Styles -->
+            <Style x:Key="MainLayout" TargetType="StackLayout">
+                <Setter Property="Margin" Value="{StaticResource DefaultThickness}" />
+            </Style>
 
+            <!-- Background colors -->
+            <Color x:Key="PageBackgroundColor">#FAFAFA</Color>
+            <Style x:Key="BasePageStyle" TargetType="Page">
+                <Setter Property="BackgroundColor" Value="{StaticResource PageBackgroundColor}" />
+            </Style>
+
+            <!-- Title Page style -->
+            <Color x:Key="TitlePageColor">#C9C9C9</Color>
+            <Style x:Key="TitlePageStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource TitlePageColor}"/>
+                <Setter Property="FontSize" Value="40"/>
+                <Setter Property="Padding" Value="20"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
+            
+            <!-- Label and entry title style -->
+            <Color x:Key="LabelEntryTitleColor">#000</Color>
+            <Style x:Key="LabelEntryTitleStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource LabelEntryTitleColor}"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="Margin" Value="10,0,0,0"/>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

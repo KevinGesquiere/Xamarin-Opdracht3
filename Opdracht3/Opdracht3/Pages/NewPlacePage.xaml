@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Opdracht3.Pages.NewPlacePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Style="{StaticResource TitlePageStyle}" Text="New Place"/>
+            
+            <Label Text="Name" Style="{StaticResource LabelEntryTitleStyle}"></Label>
+            <Entry Placeholder="Enter name" Keyboard="Text"></Entry>
+            <Label Text="Date" Style="{StaticResource LabelEntryTitleStyle}"></Label>
+            <Label Text="{Binding VisitDate}"></Label>
+            <Label Text="Coordinates" Style="{StaticResource LabelEntryTitleStyle}"></Label>
+            <Label ></Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
